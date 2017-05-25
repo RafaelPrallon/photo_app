@@ -1,2 +1,35 @@
-<h1>Welcome to the photo app</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<body>
+  <% if current_user %>
+  <h3>Welcome, <%= current_user.email %>.</h3>
+  <% else %>
+  <div class='center jumbotron col-md-12'>
+    <h2>Welcome to the Photo App.<h2>
+    <p>
+      The best place to manage your photos.
+    </p>
+	</div>
+	<div class='row'>
+    <div class='col-lg-3 col-lg-offset-3'>
+  		<h3>Premium Plan</h3>
+  		<ul>
+        <li>Unlimited Image Uploads</li>
+        <li>Responsive design</li>
+        <li>Access anywhere</li>
+  		</ul>
+  		<h3>Price: U$ 10,00</h3>
+  	  <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
+  	</div>
+  	<div class='col-lg-3'>
+  		<h3>UberPlan</h3>
+  		<ul>
+  		  <li>Unlimited Image Uploads</li>
+        <li>Responsive design</li>
+        <li>Access anywhere</li>
+        <li>Unlimited projects</li>
+  		</ul>
+  		<h3>Price: U$ 20,00</h3>
+  	  <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
+  	</div>
+  </div>
+	<% end %>
+</body>
