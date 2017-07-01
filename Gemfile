@@ -7,6 +7,9 @@ gem 'rails', '4.2.5'
 # Use devise for authentication ends
 gem 'devise'
 
+# Use stripe to process payments
+gem 'stripe'
+
 # Use bootstrap for visuals
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
